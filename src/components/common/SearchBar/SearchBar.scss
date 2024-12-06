@@ -1,0 +1,65 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+
+    input {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 30px;
+            outline: none;
+            font-size: 1rem;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+
+            &::placeholder {
+                color: #bbb;
+                font-style: italic;
+            }
+
+            &:focus {
+                background: rgba(255, 255, 255, 0.2);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+                transform: scale(1.05);
+            }
+        }
+
+        .icon {
+            position: absolute;
+            right: 15px;
+            color: #bbb;
+            font-size: 1.2rem;
+            pointer-events: none;
+            transition: color 0.3s ease-in-out;
+
+            input:focus ~ & {
+                color: #fff;
+            }
+        }
+
+        button {
+            background: #181717; /* Fond sombre */
+            color: #e62424; /* Texte rouge */
+            border: 2px solid #e62424; /* Bordure fine rouge */
+            border-radius: 10px; /* Coins arrondis */
+            padding: 10px 20px; /* Espacement interne */
+            font-size: 16px; /* Taille du texte */
+            cursor: pointer; /* Curseur pointeur au survol */
+            transition: all 0.3s ease; /* Transition douce pour les changements */
+        }
+
+        button:hover {
+            background: #e62424; /* Fond rouge vif */
+            color: #181717; /* Texte sombre */
+            border: 2px solid #181717; /* Bordure sombre */
+            transform: scale(1.05); /* Agrandissement léger */
+        }
+
+}

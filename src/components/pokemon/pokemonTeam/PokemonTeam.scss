@@ -1,0 +1,47 @@
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+
+    a {
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.2s ease;
+    }
+
+    .team-title {
+        font-size: 2rem;
+        transition: transform 0.2s ease, font-size 0.2s ease;
+        &:hover {
+            color: #007bff;
+            font-size: 2.2rem;
+        }
+    }
+
+    .pokemon-team {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        grid-template-rows: repeat(autofill, 1fr);
+        gap: 30px;
+        justify-items: stretch;
+        width: 100%;
+    }
+    @media screen and (max-width: 900px) {
+        .pokemon-team {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+    }
+
+        @media screen and (max-width: 500px) {
+        .pokemon-team {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+    }
+
+}

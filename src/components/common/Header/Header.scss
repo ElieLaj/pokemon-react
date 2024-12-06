@@ -1,0 +1,93 @@
+/* styles.css */
+
+.header {
+    background-color: #e62424; 
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    nav{
+        width: 100%;
+    }
+
+    nav ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem; 
+    }
+
+    nav ul li {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li a {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-decoration: none; /* Supprime le soulignement */
+        color: white; /* Couleur du texte */
+        font-weight: bold;
+        transition: color 0.3s ease; /* Animation pour le hover */
+    }
+
+    nav ul li a:hover {
+        color: #FFD700; /* Couleur dorée au survol */
+    }
+
+    nav ul div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+    }
+
+@media (max-width: 768px) {
+        flex-direction: column; /* Colonne pour le header */
+        nav ul {
+            flex-direction: column; /* Verticale pour les éléments du menu */
+            gap: 1rem;
+            text-align: center;
+            flex-wrap: wrap;
+
+        }
+
+        nav ul li {
+            width: 100%; /* Éléments du menu prennent toute la largeur */
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav ul img {
+            margin: 0 auto;
+        }
+
+        .search {
+            justify-content: center; /* Centrer la barre de recherche */
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .search input {
+            width: 100%; /* Champ de recherche plus large sur petits écrans */
+        }
+    }
+
+}
+
+

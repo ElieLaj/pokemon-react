@@ -1,0 +1,133 @@
+.battle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.battle-scene {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  width: 100%;
+gap: 30px;
+
+  &__enemy,
+  &__player {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__pokemon-infos {
+    min-width: 30%;
+    margin: 25px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &__pokemon-top {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  &__healthbar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+    position: relative;
+  }
+
+  &__healthbar > div {
+    height: 100%;
+    background-color: #ff0000;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &__pokemon-display {
+    margin-top: 20px;
+  }
+
+  &__pokemon-display img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+  }
+
+  // Style général de la scène de combat
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  &__dialogue {
+    height: 150px;
+    width: 50%;       
+    overflow-y: auto;        
+    overflow-x: hidden;      
+    padding-right: 10px;  
+    background-color: #171616;  
+    border-radius: 10px;
+    color: #f4f4f4;
+    padding: 5px; 
+    scrollbar-width: thin;         
+    scrollbar-color: #f11111 #333;  
+
+    &::-webkit-scrollbar {
+    width: 8px;              
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #f11111;
+        border-radius: 10px;       
+        border: 2px solid #333; 
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #333;         
+        border-radius: 10px;       
+    }
+
+    }
+
+}
+
+.battle-scene__actions button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.battle-scene__actions button:hover {
+    background-color: #45a049; 
+    transform: scale(1.05);
+}
+
+.battle-scene__actions button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.7); 
+}
+
+.battle-scene__actions button:disabled {
+    background-color: #e0e0e0; 
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+  

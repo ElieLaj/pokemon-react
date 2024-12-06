@@ -1,0 +1,54 @@
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 300px; /* Hauteur minimale pour les cartes */
+    flex-grow: 1;
+    height: 100%; /* S'assurer que la carte prend toute la hauteur disponible */
+
+    .name {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .type {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 10px;
+        min-height: 40px;
+    }
+
+    .stats {
+        margin-top: 15px;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+        text-align: left;
+
+        p {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: 5px 0;
+            font-size: 0.9rem;
+            justify-content: space-between;
+            gap: 10px;
+
+            .stats-name {
+                font-weight: bold;
+            }
+        }
+    }
+}
